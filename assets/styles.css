@@ -1,171 +1,198 @@
-/* Page base */
+/* Global text / base */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  color: #1a1a1a;
   margin: 0;
   background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.45;
 }
 
-/* Top nav bar */
-.header-bar {
-  background-color: #4f46e5; /* indigo-ish like screenshot bar */
-  color: white;
-  padding: 12px 16px;
+/* ─────────────────────────
+   TOP NAV BAR (light grey like screenshot #2)
+   ───────────────────────── */
+.topbar {
+  background-color: #f7f7fa; /* very light grey / grey-lavender */
+  color: #1a1a1a;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 24px;
-  font-size: 15px;
 }
 
-.header-left {
+.site-name {
+  color: #1a1a1a;
+  font-size: 15px;
   font-weight: 500;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   font-size: 15px;
-  color: white;
-}
-
-.header-links a {
-  color: white;
-  text-decoration: none;
   font-weight: 400;
-  margin-right: 16px;
 }
 
-.header-links a:hover {
+.site-nav a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
   text-decoration: underline;
 }
 
-/* Main content wrapper */
-.main {
-  max-width: 900px;
-  margin: 32px auto 80px auto;
+/* ─────────────────────────
+   PAGE WRAPPER
+   ───────────────────────── */
+.page {
+  max-width: 1100px;
+  margin: 24px auto 80px auto;
   padding: 0 16px;
+  box-sizing: border-box;
+  color: #1a1a1a;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* Section layout: photo + about */
-.about-section {
+/* ─────────────────────────
+   HERO ROW (photo + links, and About/Timeline)
+   ───────────────────────── */
+.hero-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
   align-items: flex-start;
+  gap: 32px;
   margin-bottom: 48px;
 }
 
-.profile-col {
-  flex: 0 0 220px;
-  text-align: center;
+/* LEFT COLUMN */
+.hero-left {
+  flex: 0 0 260px;
+  max-width: 260px;
 }
 
-.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 1000px;
+.pfp {
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
   object-fit: cover;
+  display: block;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.05);
-  margin-bottom: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 16px;
 }
 
-.profile-links {
+/* Links under profile image */
+.social-block {
   font-size: 14px;
   line-height: 1.4;
-}
-
-.profile-links a {
   color: #1a1a1a;
-  text-decoration: none;
 }
 
-.profile-links a:hover {
+.social-line {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Fake icons like his little "in" / "G" */
+.social-icon {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.linkedin-icon {
+  /* small black 'in' block vibe would normally be an SVG,
+     we keep text for now */
+}
+
+.scholar-icon {
+  /* same idea for 'G' */
+}
+
+.social-link {
+  color: #0060c9;
+  text-decoration: none;
+  word-break: break-word;
+  font-size: 14px;
+}
+.social-link:hover {
   text-decoration: underline;
 }
 
-/* Text column */
-.about-col {
+/* RIGHT COLUMN */
+.hero-right {
   flex: 1 1 400px;
-  min-width: 280px;
-}
-
-.about-col h1 {
-  margin: 0 0 16px 0;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.about-col p {
-  font-size: 15px;
-  margin: 0 0 12px 0;
-}
-
-/* Section title like "Timeline" */
-.section-title {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 48px 0 16px 0;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
+  min-width: 260px;
+  max-width: 780px;
   color: #1a1a1a;
 }
 
-/* Timeline list */
-.timeline-list {
+/* "About" and "Timeline" headings */
+.section-heading {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+}
+
+/* body text */
+.about-text {
+  margin: 0 0 12px 0;
   font-size: 15px;
-  padding-left: 20px;
-  margin-top: 0;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+/* Timeline list next to About */
+.timeline-list {
+  list-style-type: disc;
+  margin: 0 0 24px 20px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1a1a1a;
 }
 
 .timeline-list li {
   margin-bottom: 8px;
 }
 
-/* Subsection headers in about (like mini headline lines) */
-.subheadline {
-  font-weight: 500;
-  font-size: 15px;
-  margin-top: 16px;
-  margin-bottom: 4px;
-}
-
-/* Project block */
-.project-block {
-  margin-bottom: 16px;
-}
-
-.project-block .project-title {
+.timeline-list strong {
   font-weight: 600;
-  font-size: 15px;
-  margin-bottom: 4px;
+  margin-right: 6px;
 }
 
-.project-block .project-desc {
-  font-size: 15px;
-  margin: 0;
-  color: #444;
-}
-
-/* Contact area */
-.contact-block {
-  font-size: 15px;
-  line-height: 1.5;
-  margin-bottom: 32px;
-}
-
-.contact-block a {
-  color: #1a1a1a;
-  text-decoration: none;
-}
-
-.contact-block a:hover {
-  text-decoration: underline;
-}
-
-/* Tiny footer */
+/* ─────────────────────────
+   FOOTER
+   ───────────────────────── */
 .footer-note {
   font-size: 12px;
+  line-height: 1.4;
   color: #666;
-  margin-top: 64px;
-  text-align: left;
-  border-top: 1px solid #eee;
+  margin-top: 48px;
   padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: 0;
 }
