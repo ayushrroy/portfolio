@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,145 +8,101 @@
 </head>
 <body>
 
-  <!-- Top purple header bar -->
+  <!-- Top light-grey nav bar -->
   <header class="topbar">
     <div class="topbar-inner">
       <div class="site-name">Ayush Roy</div>
       <nav class="site-nav">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#contact">Contact</a>
-        <!-- <a href="Ayush_Roy_CV.pdf">CV</a> -->
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main page content -->
   <main class="page">
 
-    <!-- ABOUT + TIMELINE WRAPPER (2-column layout like screenshot) -->
-    <section id="about" class="about-wrap">
+    <!-- HERO ROW = photo + links on left, About + Timeline on right -->
+    <section id="about" class="hero-row">
 
-      <!-- left column = profile image + links -->
-      <div class="left-col">
+      <!-- LEFT COLUMN -->
+      <div class="hero-left">
         <img src="assets/image.jpg" alt="Ayush Roy" class="pfp" />
 
         <div class="social-block">
           <div class="social-line">
-            <span class="icon">🌐</span>
-            <a href="https://github.com/ayushrroy" class="social-link">GitHub</a>
+            <span class="social-icon linkedin-icon">in</span>
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_HERE" class="social-link">
+              LinkedIn
+            </a>
           </div>
 
           <div class="social-line">
-            <span class="icon">✉️</span>
-            <a href="mailto:your_email_here" class="social-link">your_email_here</a>
+            <span class="social-icon scholar-icon">G</span>
+            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link">
+              Google Scholar
+            </a>
           </div>
-
-          <!-- uncomment / update when you’re ready
-          <div class="social-line">
-            <span class="icon">in</span>
-            <a href="https://www.linkedin.com/in/..." class="social-link">LinkedIn</a>
-          </div>
-
-          <div class="social-line">
-            <span class="icon">G</span>
-            <a href="https://scholar.google.com/..." class="social-link">Google Scholar</a>
-          </div>
-          -->
         </div>
       </div>
 
-      <!-- right column = About text + Timeline heading + bullet list -->
-      <div class="right-col">
+      <!-- RIGHT COLUMN -->
+      <div class="hero-right">
 
+        <!-- ABOUT -->
         <h1 class="section-heading">About</h1>
 
         <p class="about-text">
-          Hi 👋 I'm Ayush. I work on real-time XR / VR systems,
-          rail maintenance AI, and automation for operations analytics.
+          Hi 👋 I'm Ayush. I work on real-time XR / VR systems, rail maintenance AI, and automation for
+          operations analytics.
         </p>
 
         <p class="about-text">
-          I build:
+          I build systems for:
         </p>
-
-        <ul class="about-list">
-          <li>Real-time XR / VR systems (Quest Pro, Unity, gaze-based interaction)</li>
-          <li>Rail maintenance AI (fluorescence sensing, Jetson Orin, signal processing)</li>
-          <li>Automation / dashboards for operations and analytics</li>
-        </ul>
 
         <p class="about-text">
-          I care about taking messy physical-world signals
-          (sensors, maintenance data, human attention in VR)
-          and turning them into something you can act on
-          <strong>right now</strong>, not after a report next week.
+          • Real-time XR / VR systems (Quest Pro, Unity, gaze-based interaction) <br />
+          • Rail maintenance AI (fluorescence sensing, Jetson Orin, signal processing) <br />
+          • Automation / dashboards for operations and analytics
         </p>
 
-        <!-- Timeline lives directly under About, same column -->
-        <h2 id="timeline" class="section-heading">Timeline</h2>
+        <p class="about-text">
+          My work focuses on taking messy physical-world signals (sensors, maintenance data, human
+          attention in VR) and turning them into something you can act on <strong>right now</strong>,
+          not after a report next week.
+        </p>
+
+        <!-- TIMELINE -->
+        <h2 class="section-heading" id="timeline">Timeline</h2>
 
         <ul class="timeline-list">
-          <li><strong>2025:</strong> Built an end-to-end rail lubrication monitoring pipeline using fluorescence sensing + edge compute, aiming for real-time maintenance decisions in the field.</li>
-          <li><strong>2025:</strong> Prototyped multi-user VR analytics workspace so teams can explore documents, clusters, and notes together in 3D instead of screensharing slides.</li>
-          <li><strong>2024:</strong> Built internal dashboards and automated data flows that cut manual reporting / data entry and let non-technical teams self-serve analytics.</li>
+          <li>
+            <strong>Sep. 2025</strong> Built an end-to-end rail lubrication monitoring pipeline using
+            fluorescence sensing and edge compute to support real-time maintenance decisions in the field.
+          </li>
+          <li>
+            <strong>Jul. 2025</strong> Prototyped a multi-user VR analytics workspace so teams can explore
+            documents, clusters, and notes together in 3D instead of screen-sharing slides.
+          </li>
+          <li>
+            <strong>May 2025</strong> Developed gaze-based interaction for Quest Pro to enable hands-free,
+            attention-driven analytics review in VR.
+          </li>
+          <li>
+            <strong>Dec. 2024</strong> Automated reporting/data-entry pipelines so non-technical teams
+            could self-serve analytics, replacing manual spreadsheet work.
+          </li>
         </ul>
 
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="projects-wrap">
-      <h2 class="section-heading">Projects</h2>
+    <!-- Placeholder anchors for nav links so they don't 404 -->
+    <section id="publications"></section>
+    <section id="cv"></section>
 
-      <div class="project-block">
-        <div class="project-title">Rail Lubricity Monitoring</div>
-        <div class="project-desc">
-          Built a pipeline that reads fluorescence signals from grease on rails,
-          classifies them into green / yellow / red lubrication levels,
-          and visualizes track health in real time using edge compute.
-        </div>
-      </div>
-
-      <div class="project-block">
-        <div class="project-title">Quadra — Collaborative XR Analytics Workspace</div>
-        <div class="project-desc">
-          Unity + VR environment for exploring documents, clusters, and notes in 3D.
-          Lets multiple people analyze info together in VR instead of on a 2D screen.
-        </div>
-      </div>
-
-      <div class="project-block">
-        <div class="project-title">Process Automation &amp; Internal Tools</div>
-        <div class="project-desc">
-          Built internal dashboards and data flows to cut manual data entry
-          and make reports self-serve.
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact-wrap">
-      <h2 class="section-heading">Contact</h2>
-
-      <p class="contact-line">
-        <strong>GitHub:</strong>
-        <a href="https://github.com/ayushrroy" class="contact-link">https://github.com/ayushrroy</a>
-      </p>
-
-      <p class="contact-line">
-        <strong>Email:</strong>
-        <a href="mailto:your_email_here" class="contact-link">your_email_here</a>
-      </p>
-
-      <p class="contact-line">
-        <strong>Resume:</strong>
-        coming soon (PDF)
-      </p>
-    </section>
-
-    <!-- FOOTER -->
+    <!-- footer -->
     <footer class="footer-note">
       ayushrroy.github.io is maintained by Ayush Roy.
       This page is generated by GitHub Pages.
